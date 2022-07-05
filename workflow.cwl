@@ -19,9 +19,9 @@ inputs:
   workflow_base_dataset_url: string
 
 outputs:
-  final_dataset_dir:
+  final_outputs_dir:
     type: Directory
-    outputSource: downsample_dem/dataset_dir
+    outputSource: downsample_dem/outputs_dir
 #  stdout-downsample_dem:
 #    type: File
 #    outputSource: downsample_dem/stdout_file
@@ -55,7 +55,7 @@ steps:
       max_stress_time: workflow_max_stress_time
     out:
       - output_nb_file
-      - dataset_dir
+      - outputs_dir
 #      - stdout_file
 #      - stderr_file
 
@@ -64,7 +64,7 @@ steps:
     in:
       aws_access_key_id: workflow_aws_access_key_id
       aws_secret_access_key: workflow_aws_secret_access_key
-      dataset_dir: downsample_dem/dataset_dir
+      outputs_dir: downsample_dem/outputs_dir
       base_dataset_url: workflow_base_dataset_url
     out: []
 #    out:

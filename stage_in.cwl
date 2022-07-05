@@ -32,7 +32,7 @@ outputs:
   image_file:
     type: File
     outputBinding:
-      glob: 'Copernicus_DSM_COG*.tif'
+      glob: 'inputs/Copernicus_DSM_COG*.tif'
 #  stdout_file:
 #    type: stdout
 #  stderr_file:

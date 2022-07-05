@@ -46,10 +46,10 @@ outputs:
     type: File
     outputBinding:
       glob: output_nb.ipynb
-  dataset_dir:
+  outputs_dir:
     type: Directory
     outputBinding:
-      glob: '*_downsampled'
+      glob: 'outputs'
 #  stdout_file:
 #    type: stdout
 #  stderr_file:
