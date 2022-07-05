@@ -1,0 +1,51 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "downsample-dem-workflow",
+            "title": "Downsample Copernicus DEM",
+            "owsContext": {
+                "offering": {
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/pymonger/downsample-dem/0.0.1/workflow.cwl"
+                    }
+                }
+            },
+            "abstract": "Application Package Demo",
+            "keywords": ["Demo"],
+            "inputs": [
+                {
+                    "id": "parameters",
+                    "title": "Parameter File",
+                    "input": {
+                        "literalDataDomains": [{
+                            "dataType": {
+                                "name": "File"
+                            }
+                        }]
+                    }
+                }
+            ],
+            "outputs": [{
+                "id": "output",
+                "title": "stdout",
+                "output": {
+                    "formats": [{
+                        "mimeType": "text/*",
+                        "default": true
+                    }]
+                }
+            }]
+        },
+        "processVersion": "0.0.1",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [{
+        "href": "docker://pymonger/downsample-dem:0.0.1"
+    }]
+}
