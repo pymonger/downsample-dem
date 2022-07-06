@@ -13,17 +13,17 @@ requirements:
   ShellCommandRequirement: {}
   InitialWorkDirRequirement:
     listing: 
-      - $(inputs.input_file)
+      - $(inputs.inputs_dir)
 
 inputs:
-  input_file:
-    type: File
+  inputs_dir:
+    type: Directory
     inputBinding:
       position: 1
       shellQuote: false
       prefix: '--parameters'
       valueFrom: |
-        input_file "$(self.basename)"
+        inputs_dir "$(self.basename)"
   min_stress_time:
     type: int
     inputBinding:
@@ -46,10 +46,10 @@ outputs:
     type: File
     outputBinding:
       glob: output_nb.ipynb
-  dataset_dir:
+  outputs_dir:
     type: Directory
     outputBinding:
-      glob: '*_downsampled'
+      glob: 'outputs'
 #  stdout_file:
 #    type: stdout
 #  stderr_file:
