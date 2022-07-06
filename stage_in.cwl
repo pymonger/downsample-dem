@@ -29,10 +29,10 @@ outputs:
     type: File
     outputBinding:
       glob: output_nb.ipynb
-  image_file:
-    type: File
+  inputs_dir:
+    type: Directory
     outputBinding:
-      glob: 'inputs/Copernicus_DSM_COG*.tif'
+      glob: 'inputs'
 #  stdout_file:
 #    type: stdout
 #  stderr_file:

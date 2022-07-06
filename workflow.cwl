@@ -43,14 +43,14 @@ steps:
       input_url: workflow_input_url
     out:
       - output_nb_file
-      - image_file
+      - inputs_dir
 #      - stdout_file
 #      - stderr_file
 
   downsample_dem:
     run: downsample_dem.cwl
     in:
-      input_file: stage_in/image_file
+      inputs_dir: stage_in/inputs_dir
       min_stress_time: workflow_min_stress_time
       max_stress_time: workflow_max_stress_time
     out:
