@@ -19,6 +19,9 @@ inputs:
   workflow_base_dataset_url: string
 
 outputs:
+  final_inputs_dir:
+    type: Directory
+    outputSource: stage_in/inputs_dir
   final_outputs_dir:
     type: Directory
     outputSource: downsample_dem/outputs_dir
